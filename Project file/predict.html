@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html><head><title>Predict</title></head>
+<body>
+<h2>Upload pollen image:</h2>
+<form method="post" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <button type="submit">Predict</button>
+</form>
+{% if label %}
+  <h3>Label: {{ label }} (Confidence: {{ '%.2f'|format(prob) }})</h3>
+{% endif %}
+</body></html>
